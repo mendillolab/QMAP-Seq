@@ -1,5 +1,7 @@
 ## script: concatenate.R
 ## Concatenate all tables saved in QMAPP folder
+library(tidyr)
+library(dplyr)
 
 # get file names 
 files = list.files(path="QMAPP")
