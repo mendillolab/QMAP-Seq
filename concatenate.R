@@ -1,7 +1,7 @@
 ## script: concatenate.R
 ## Concatenate all tables saved in QMAPP folder
-library(tidyr)
-library(dplyr)
+require(tidyr)
+require(dplyr)
 
 # get file names 
 files = list.files(path="QMAPP",pattern="\\.cellSurvival.txt$")
