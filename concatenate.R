@@ -11,7 +11,7 @@ exclude <- c("ABT199","Dexamethasone","Fingolimod","BMS345541","Ouabain", "Belin
 fi = files[!grepl(paste(exclude, collapse="|"), files)]
 
 # read all files into one dataframe
-df = lapply(f, read.table, header=TRUE, sep=" ")
+df = lapply(fi, read.table, header=TRUE, sep=" ")
 for (i in 1:length(df)){
   df[[i]] <- cbind(df[[i]], f[i])
   df[[i]]$dose_rep <- rownames(df[[i]])}
