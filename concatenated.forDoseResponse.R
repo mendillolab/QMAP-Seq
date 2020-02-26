@@ -1,5 +1,8 @@
 ####################################################
 ### QMAPP reformatting for PRISM plots - 10/8/19 ###
+require(readr)
+require(tidyr)
+require(dplyr)
 
 # load data and combine cell_line /drug columns
 qmapp <- read_csv("QMAPP/QMAPP.concatenated.csv")
