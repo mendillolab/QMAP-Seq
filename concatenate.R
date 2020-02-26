@@ -4,7 +4,7 @@ library(tidyr)
 library(dplyr)
 
 # get file names 
-files = list.files(path="QMAPP")
+files = list.files(path="QMAPP",pattern="\\.cellSurvival.txt$")
 setwd("QMAPP")
 
 exclude <- c("ABT199","Dexamethasone","Fingolimod","BMS345541","Ouabain", "Belinostat") 
@@ -13,7 +13,7 @@ fi = files[!grepl(paste(exclude, collapse="|"), files)]
 # read all files into one dataframe
 df = lapply(fi, read.table, header=TRUE, sep=" ")
 for (i in 1:length(df)){
-  df[[i]] <- cbind(df[[i]], f[i])
+  df[[i]] <- cbind(df[[i]], fi[i])
   df[[i]]$dose_rep <- rownames(df[[i]])}
 
 df <- do.call("rbind", df)
