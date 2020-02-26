@@ -42,3 +42,8 @@ column_order <- c("cell_line_drug","logDrugConcentration","dose", "sgNT0.4_rep1"
                                                            "sgXBP1_rep1", "sgXBP1_rep2") 
 qmapp2 <- qmapp2[,column_order]
 write_csv(qmapp2, path="QMAPP.concatenated.forDoseResponse.csv")
+
+## for long dataframe
+qmapp <- read_csv("QMAPP/QMAPP.concatenated.csv")
+long_df <- df %>% tidyr::gather(sgRNA, survival, sgNT0.4:sgXBP1)
+write.csv(df, file="QMAPP.concatenated.long.csv", row.names=FALSE)
