@@ -1,10 +1,10 @@
-library(dplyr)
-library(tidyr)
-library(tibble)
-library(genefilter)
-library(ggplot2)
-library(readr)
-library(plotly)
+require(dplyr)
+require(tidyr)
+require(tibble)
+require(genefilter)
+require(ggplot2)
+require(readr)
+require(plotly)
 
 # parameters
 dose4.sgNT.mean.cutoff = 90
