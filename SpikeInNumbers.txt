@@ -1,0 +1,6 @@
+CellLine	sgRNA	CellNumber
+293T	sgNT5	15
+293T	sgNT6	45
+293T	sgNT7	135
+293T	sgNT8	405
+293T	sgNT9	1215
